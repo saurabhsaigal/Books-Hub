@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    font-family: Times New Roman;
+	font-weight: bold;
+	color: rgb(111, 231, 247);
+	font-size: 300%;
+
+}
+h3,h5{
+	font-family: Times New Roman;
+	font-weight: 400px;
+    font-weight: bold;
+    color:white
+}
+body{
+	overflow: hidden;
+	background-image: url(b.jpg);
+	background-size: cover;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    color:white;
+}
+::placeholder {
+	color: white;
+	opacity: 1; /* Firefox */
+  }
+ input{
+	border: 2px solid white;
+	border-radius: 4px;
+	/*background-color: rgb(174, 227, 243);*/
+    background-color:black;
+    height:90px;
+    width :500px;
+    color:white;
+}
+.btn{
+	background-color: rgb(110, 231, 247);
+    border :2px solid white;
+    color:black;
+}
+

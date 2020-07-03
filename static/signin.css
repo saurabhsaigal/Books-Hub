@@ -1,0 +1,41 @@
+h1{
+	text-align: center;
+	font-weight: bold;
+	font-family: Times New Roman;
+	border: 20px;
+	color: rgb(253, 253, 253);
+	font-size: 350%;
+
+
+}
+
+body{
+	/*background-image: url(https://www.ortho-max.net/wp-content/uploads/2018/01/Medical-Background-3.jpg);*/
+	background-image: url(bc.jpg);
+	background-size: cover;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow :hidden;
+}
+
+h3{
+	font-family: Times New Roman;
+	font-weight: bold;
+	color: white;
+
+}
+::placeholder {
+	color: white;
+	opacity: 1; /* Firefox */
+  }
+input{
+	border: 2px solid black;
+	border-radius: 4px;
+	/*background-color: rgb(174, 227, 243);*/
+	background-color: rgb(182, 48, 63);
+}
+.btn{
+	background-color: rgb(110, 79, 22);
+
+}

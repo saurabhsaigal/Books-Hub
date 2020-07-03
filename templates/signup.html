@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>books hub</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+
+        <style>
+            .form-group,h3,h5{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"><br><br><br>
+        <h1>Welcome to books hub</h1><br><br>
+        <h3>Sign Up </h3>
+        {% if message %}
+        <h3><div class="alert alert-info text-center" role="alert">{{message}}</div></h3>
+        {% endif %}
+        <form action="{{url_for('check')}}" method="POST">
+            <div class="form-group">
+                <input class="form-group" name="name" placeholder="name"><br>
+                <input class="form-group" name="username" placeholder="username"><br>
+                <input class="form-group" type="password" name="password" placeholder="password"><br>
+                <input class="form-group" type="password" name="r_password" placeholder="retype-password">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">register</button>
+            </div>
+        </form>
+        <h5>If aleady have an account 
+        <a href = "{{url_for('sign')}}" method="POST">SIGN IN</a>
+        </h5>
+        </div>
+    </body>
+</html>

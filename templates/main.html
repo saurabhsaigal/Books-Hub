@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            books
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+    </head>
+    <body>
+        <div class="container">
+        <h1>Welcome to books world </h1><br>
+        <h4>
+            You can search your fav book and can read and write reviews about it .
+        </h4>
+        <br>
+        <form action="{{url_for('search')}}" method="POST">
+        <div class="form-group">
+            <input class="form-group" name="bname" placeholder="Book Specs">
+            <button class="btn btn-primary">Search</button>
+        </div>
+        </form>
+        <a id="bar" href = "/logout">Log out</a><br>
+        {% if books!=NONE %}
+            <ul>
+                {% for book in books %}
+                    <li>
+                        <a href="{{ url_for('book',book_title=book.book_id) }}">
+                            Author - {{ book.author}}<br>Title - {{book.title}}<br>ISBN - {{book.isbn}}<br>Year - {{book.year}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        </div>
+    </body>
+</html>

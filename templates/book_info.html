@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>book Info</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='book.css') }}">
+
+    </head>
+    <body>
+        <div class="container">
+        <br>
+        <h1>Title : {{ books.title }}</h1>
+        <br>
+    <h3>
+        Author : {{ books.author }}<br>
+        Year : {{ books.year }} <br>
+        ISBN : {{ books.isbn }}<br>
+    </h3>
+    <br>
+    <h3>Book Rating = {{data}}</h3>
+    <br><br>
+    <h4>Write a Review</h4>
+    <form class="form-group" action="{{ url_for('reviews_1', book_title=books.book_id) }} " method="post">
+    <input name="review" place holder="write a review">
+    <button class="btn btn-primary">Submit</button>
+    <br><br>
+    
+    
+            <ul>
+                    {% for review in reviews%}
+                    <li><h4>
+                        {{ review }}
+                    </h4></li>
+                    {%endfor%}
+    
+            </ul>
+
+    
+    </form>
+    <br>
+    <h3>{{message}}</h3>
+
+    </div>
+    </body>
+</html>

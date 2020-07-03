@@ -1,0 +1,46 @@
+h1{
+	text-align: center;
+	padding: 20px;
+	font-family: Times New Roman;
+	font-weight: bold;
+	/*color: rgb(214, 18, 19);*/
+	color:black;
+	font-size: 300%;
+	border: 20px;
+
+}
+
+h4{
+	font-family: Times New Roman;
+	color: rgb(214, 18, 18);
+	font-weight: bold;
+
+}
+body{
+	background-image: url("book.jpg");
+	
+
+	/*background-attachment: fixed;*/
+	color : black;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+input{
+	border: 2px solid black;
+	border-radius: 4px;
+	/*background-color: rgb(174, 227, 243);*/
+	background-color: rgb(252, 224, 64);
+
+}
+::placeholder {
+	color: black;
+	opacity: 1; /* Firefox */
+  }
+
+.btn{
+	background-color: rgb(214, 18, 18);
+
+}
+a{
+	color: rgb(10, 11, 22);
+}
